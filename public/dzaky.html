@@ -5,12 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dzaky Faiq Fayyadhi - KPP BMS</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Animations */
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hover-grow:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .glow-border:hover {
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.75);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body class="bg-gray-900 text-white font-sans fade-in">
     <!-- Header Section -->
     <header class="h-64 bg-cover bg-center relative" style="background-image: url('images/bg_callista.jpg');">
-        <div class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-            <h1 class="text-4xl sm:text-5xl font-bold text-gray-200">Dzaky Faiq Fayyadhi</h1>
+        <div class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center">
+            <h1 class="text-4xl sm:text-6xl font-bold text-gray-100 tracking-wide">Dzaky Faiq Fayyadhi</h1>
         </div>
     </header>
 
@@ -18,51 +39,55 @@
     <section class="bg-black py-16 text-center">
         <div class="flex flex-col items-center space-y-4">
             <!-- Container untuk gambar dan nama -->
-            <div class="border border-white rounded-lg h-40 w-32 flex items-center justify-center">
-                <img src="images/Dzaky.jpg" alt="Callista" class="rounded-lg h-full w-full object-cover">
+            <div class="border border-white rounded-lg h-40 w-32 flex items-center justify-center hover-grow">
+                <img src="images/Dzaky.jpg" alt="Dzaky" class="rounded-lg h-full w-full object-cover">
             </div>
             <!-- Nama dan deskripsi di luar gambar -->
-            <h2 class="text-2xl font-bold text-white">Dzaky Faiq Fayyadhi</h2>
-            <p class="text-lg text-white">NRP: 5027231047</p>
-            <p class="mt-4 text-white text-center w-3/4 md:w-1/2">
+            <h2 class="text-3xl font-bold text-white">Dzaky Faiq Fayyadhi</h2>
+            <p class="text-lg text-gray-300">5027231047</p>
+            <p class="mt-4 text-gray-400 text-center w-3/4 md:w-1/2">
                 Hi, I’m Dzaky Faiq Fayyadhi from West Kalimantan. I’m majoring in Information Technology. Here are the works I did during Basic Media Schooling!
             </p>
         </div>
     </section>
-    
-    
 
-    <!-- Callista's Work Section -->
+    <!-- Projects and Contributions Section -->
     <section class="py-16 px-8">
-        <h2 class="text-3xl font-bold text-center mb-8">Projects and Contributions</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-gray-800 p-8 rounded-lg">
-                <h3 class="text-xl font-bold mb-4">The Basics of Design</h3>
-                <p>In this course, I learned how to create landing pages and designs using tools like Figma...</p>
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-100">Projects and Contributions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Project 1 -->
+            <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover-grow">
+                <h3 class="text-2xl font-bold mb-4 text-blue-400">The Basics of Design</h3>
+                <p class="text-gray-300">We learned the basics of design, including shape grouping, color theory, and created a basic landing page using Figma, which was a new experience for me. This project introduced me to design concepts and tools.</p>
             </div>
-            <div class="bg-gray-800 p-8 rounded-lg">
-                <h3 class="text-xl font-bold mb-4">The Basics of Website</h3>
-                <p>Here, I learned HTML and CSS and created a functional website...</p>
+            <!-- Project 2 -->
+            <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover-grow">
+                <h3 class="text-2xl font-bold mb-4 text-blue-400">The Basics of Website</h3>
+                <p class="text-gray-300">We learned the basics of website programming (HTML & CSS) and how to use VSCode to commit and push code. This project helped me understand how websites are built and gave me hands-on experience with coding.</p>
             </div>
-            <div class="bg-gray-800 p-8 rounded-lg">
-                <h3 class="text-xl font-bold mb-4">The Basics of Creative Copywriting</h3>
-                <p>I worked on improving my copywriting skills to create compelling content...</p>
+            <!-- Project 3 -->
+            <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover-grow">
+                <h3 class="text-2xl font-bold mb-4 text-blue-400">The Basics of Creative Copywriting</h3>
+                <p class="text-gray-300">Learning the art of copywriting was a fun and creative experience. We worked on real projects, brainstorming ideas and collaborating, which made the whole process highly engaging and educational.</p>
             </div>
-            <div class="bg-gray-800 p-8 rounded-lg">
-                <h3 class="text-xl font-bold mb-4">The Basics of Photography</h3>
-                <p>I learned how to take creative photos and edit them to enhance their visual appeal...</p>
+            <!-- Project 4 -->
+            <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover-grow">
+                <h3 class="text-2xl font-bold mb-4 text-blue-400">The Basics of Photography</h3>
+                <p class="text-gray-300">This section taught us photography fundamentals, from lighting to perspective. I captured a portrait of my friend Tika, aiming to reflect her fun and calm personality. The feedback was invaluable for improving my skills.</p>
             </div>
         </div>
     </section>
 
-    <!-- Back to Main Page -->
+    <!-- Back to Main Page Section -->
     <section class="text-center py-16">
-        <a href="index.html" class="py-2 px-6 bg-blue-500 rounded-full">Back to Main Page</a>
+        <a href="index.html" class="py-3 px-8 bg-blue-500 rounded-full text-lg font-bold text-white hover:bg-blue-600 glow-border">
+            Back to Main Page
+        </a>
     </section>
 
     <!-- Footer Section -->
     <footer class="bg-black text-center py-8">
-        <p>&copy; 2024 KPP BMS. All rights reserved.</p>
+        <p class="text-gray-500">&copy; 2024 KPP BMS. All rights reserved.</p>
     </footer>
 </body>
 </html>
