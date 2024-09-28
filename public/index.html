@@ -5,92 +5,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KPP BMS - Main Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+        .golden-text {
+            color: #D2B48C;
+        }
+        .bg-custom {
+            background-image: url('images/bg_hero.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .kpp-shadow {
+            text-shadow: -4px 0 8px rgba(210, 180, 140, 0.3);
+        }
+        .bms-shadow {
+            text-shadow: 4px 0 8px rgba(210, 180, 140, 0.3);
+        }
+        .team-member {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .bg-gradient-black-yellow {
+            background: linear-gradient(135deg, #000000 0%, #FFD700 100%);
+        }
+        .bg-gradient-black-gold {
+            background: linear-gradient(135deg, #000000 0%, #000000 70%, #D4AF37 100%);
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
     
-    <!-- Header Section with Background Image -->
-    <header class="min-h-screen bg-cover bg-center relative" style="background-image: url('images/bg_hero.jpg');">
-        <div class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center px-4">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-200 text-center">KPP BMS</h1>
+    <!-- Header Section -->
+    <header class="min-h-screen flex items-center justify-center bg-custom">
+        <div class="relative fade-in-section">
+            <h1 class="text-8xl golden-text text-left" style="font-family: Arial, sans-serif; font-weight: normal;">
+                <span class="block mb-4 -ml-16 kpp-shadow underline-blue">KPP</span>
+                <span class="block ml-16 bms-shadow">BMS</span>
+            </h1>
         </div>
     </header>
     
-
     <!-- Welcome Section -->
-    <section class="bg-red-600 py-16 text-center">
-        <h2 class="text-4xl font-bold mb-4">WELCOME TO OUR WEBSITE!</h2>
-        <p class="text-lg">In this website, we will be documenting the works we’ve done during the Basic Media Schooling event. We hope you enjoy the layout and design we used!</p>
+    <section class="bg-gradient-black-gold py-16 text-center">
+        <div class="fade-in-section">
+            <h2 class="text-4xl font-bold mb-4">WELCOME TO OUR WEBSITE!</h2>
+            <p class="text-lg">In this website, we will be documenting the works we've done during the Basic Media Schooling event. We hope you enjoy the layout and design we used!</p>
+        </div>
     </section>
     
     <section class="flex flex-col md:flex-row items-stretch">
         <!-- BMS Section -->
-        <div class="flex flex-1">
-            <!-- Div ungu -->
-            <div class="flex-1 bg-purple-800 text-white p-4">
-                <h2 class="text-3xl font-bold">BMS?</h2>
-                <p>So, what is Basic Media Schooling?</p>
+        <div class="flex-1 bg-gradient-black-gold text-white p-8">
+            <div class="fade-in-section">
+                <h2 class="text-3xl font-bold mb-4">BMS?</h2>
+                <p class="mb-2">So, what is Basic Media Schooling?</p>
                 <p>Tolong jelasin guys hueawruaww hehehe jelasin disini ya Lorem ipsum Tolong jelasin guys hueawruaww hehehe jelasin disini ya Lorem ipsum</p>
             </div>
-    
-            <!-- Div hitam -->
-            <div class="flex-1 bg-black text-white p-4">
-                <h2 class="text-3xl font-bold">IT DEPT?</h2>
-                <p>What are the things we do in the IT Department?</p>
+        </div>
+
+        <!-- IT DEPT Section -->
+        <div class="flex-1 bg-gradient-black-gold text-white p-8">
+            <div class="fade-in-section">
+                <h2 class="text-3xl font-bold mb-4">IT DEPT?</h2>
+                <p class="mb-2">What are the things we do in the IT Department?</p>
                 <p>Tolong jelasin guys hueawruaww hehehe jelasin disini ya Lorem ipsum Tolong jelasin guys hueawruaww hehehe jelasin disini ya Lorem ipsum</p>
             </div>
         </div>
     </section>
     
-    
-    
-    
-    
-  <!-- MEET THE TEAM -->
-  <section class="bg-black text-center py-16">
-    <h2 class="text-3xl font-bold mb-8 text-white">MEET THE TEAM</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 justify-center max-w-4xl mx-auto">
-        <div class="text-center">
-            <div class="border border-white rounded-lg h-40 w-32 mx-auto flex items-center justify-center">
-                <img src="images/callista.JPG" alt="Callista" class="rounded-lg h-full w-full object-cover">
+    <!-- MEET THE TEAM -->
+    <section class="bg-black text-center py-16">
+        <h2 class="text-3xl font-bold mb-8 text-white fade-in-section">MEET THE TEAM</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center max-w-6xl mx-auto">
+            <div class="team-member bg-gray-800 rounded-lg overflow-hidden fade-in-section">
+                <img src="images/callista.JPG" alt="Callista" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl mt-2 text-white">Callista Meyra Azizah</h3>
+                    <p class="text-gray-400">(5027231060)</p>
+                    <a href="callista.html" class="mt-4 py-2 px-6 bg-blue-500 rounded-full inline-block text-white hover:bg-blue-600 transition duration-300">Learn More</a>
+                </div>
             </div>
-            <h3 class="text-xl mt-4 text-white">Callista Meyra Azizah</h3>
-            <p class="text-white">(5027231060)</p>
-            <a href="callista.html" class="mt-4 py-2 px-6 bg-blue-500 rounded-full inline-block text-white">Learn More</a>
-        </div>
 
-        <div class="text-center">
-            <div class="border border-white rounded-lg h-40 w-32 mx-auto flex items-center justify-center">
-                <img src="images/Dzaky.JPG" alt="Dzaky" class="rounded-lg h-full w-full object-cover">
+            <div class="team-member bg-gray-800 rounded-lg overflow-hidden fade-in-section">
+                <img src="images/Dzaky.JPG" alt="Dzaky" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl mt-2 text-white">Dzaky Faiq Fayyadhi</h3>
+                    <p class="text-gray-400">(5027231047)</p>
+                    <a href="Dzaky.html" class="mt-4 py-2 px-6 bg-blue-500 rounded-full inline-block text-white hover:bg-blue-600 transition duration-300">Learn More</a>
+                </div>
             </div>
-            <h3 class="text-xl mt-4 text-white">Dzaky Faiq Fayyadhi</h3>
-            <p class="text-white">(5027231047)</p>
-            <a href="Dzaky.html" class="mt-4 py-2 px-6 bg-blue-500 rounded-full inline-block text-white">Learn More</a>
-        </div>
 
-        <div class="text-center">
-            <div class="border border-white rounded-lg h-40 w-32 mx-auto flex items-center justify-center">
-                <img src="images/Gandhie.JPG" alt="Gandhie" class="rounded-lg h-full w-full object-cover">
+            <div class="team-member bg-gray-800 rounded-lg overflow-hidden fade-in-section">
+                <img src="images/Gandhie.JPG" alt="Gandhie" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl mt-2 text-white">Gandhie Ert Julio</h3>
+                    <p class="text-gray-400">(5027231081)</p>
+                    <a href="Gandhie.html" class="mt-4 py-2 px-6 bg-red-500 rounded-full inline-block text-white hover:bg-red-600 transition duration-300">Learn More</a>
+                </div>
             </div>
-            <h3 class="text-xl mt-4 text-white">Gandhie Ert Julio</h3>
-            <p class="text-white">(5027230613)</p>
-            <a href="Gandhie.html" class="mt-4 py-2 px-6 bg-red-500 rounded-full inline-block text-white">Learn More</a>
-        </div>
 
-        <div class="text-center">
-            <div class="border border-white rounded-lg h-40 w-32 mx-auto flex items-center justify-center">
-                <img src="images/Ega.JPG" alt="Rafael Ega" class="rounded-lg h-full w-full object-cover">
+            <div class="team-member bg-gray-800 rounded-lg overflow-hidden fade-in-section">
+                <img src="images/Ega.JPG" alt="Rafael Ega" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl mt-2 text-white">Rafael Ega</h3>
+                    <p class="text-gray-400">(5027231025)</p>
+                    <a href="Ega.html" class="mt-4 py-2 px-6 bg-yellow-500 rounded-full inline-block text-white hover:bg-yellow-600 transition duration-300">Learn More</a>
+                </div>
             </div>
-            <h3 class="text-xl mt-4 text-white">Rafael Ega</h3>
-            <p class="text-white">(5027231025)</p>
-            <a href="Ega.html" class="mt-4 py-2 px-6 bg-yellow-500 rounded-full inline-block text-white">Learn More</a>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Footer Section -->
     <footer class="bg-black text-center py-8">
         <p>&copy; 2024 KPP BMS. All rights reserved.</p>
     </footer>
-</body>
+
+    <script>
+        const faders = document.querySelectorAll('.fade-in-section');
+
+        const appearOptions = {
+            threshold: 0.3,
+            rootMargin: "0px 0px -100px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    entry.target.classList.remove('is-visible');
+                } else {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
 </body>
 </html>
